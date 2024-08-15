@@ -3,15 +3,43 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://glitch.com/favicon.ico" />
     <title>TgX.2</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <img scr="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIi54zwD30hXyOe_SPAQKA5shGwilwGcKXXw&s" />
     
-    <h1>
-      Bùi Đình Lộc
-    </h1>
+    <div>
+      <ul>
+        <li><button onclick="showPage('page1')">
+          Giới thiệu
+        </button></li>
+        <li><button onclick="showPage('page2')">
+          Mạng xã hội
+        </button></li>
+        <li><button onclick="showPage('page3')">
+          Oline Judge
+        </button></li>
+      </ul>
+      
+    </div>
+    
+    <div id="page1" class="page active">
+        
+      <img scr="avt1.png">
+      
+    </div>
+  
+       <script>
+        function showPage(pageId) {
+            var pages = document.querySelectorAll('.page');
+            pages.forEach(function(page) {
+                page.classList.remove('active');
+            });
+
+            var selectedPage = document.getElementById(pageId);
+            selectedPage.classList.add('active');
+        }
+    </script>
     
   </body>
 </html>
