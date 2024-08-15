@@ -1,0 +1,132 @@
+body {
+  font-family: 'Jetbrains Mono'
+}
+
+ul {
+  position: -webkit-sticky; 
+  position: sticky;
+  top: 0;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 10;
+  overflow: hidden;
+  background-color: #F6F8FA;
+  border-radius: 15px 15px 15px 15px;
+}
+
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: left;
+  padding: 20px 30px;
+  text-decoration: none;
+}
+
+body {
+  background-color: white; 
+}
+
+li a:hover {
+  background-color: #495569;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+#rcorners {
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px; 
+} 
+
+button {
+  display: block;
+  color: black;
+  background-color: #F6F8FA;
+  text-align: left;
+  padding: 14px 16px;
+  border: none;
+  text-decoration: none;
+  font-family: 'Jetbrains Mono'
+}
+
+button:hover {
+  background-color: #EEF1F4;
+    border-radius: 15px;
+}
+
+.page {
+    display: none;
+    padding: 20px;
+    background-color: #EEF1F4;
+    margin-top: 15px;
+    border-radius: 15px;
+}
+.active {
+    display: block;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    background-color: white;
+    border-radius: 8px;
+/*     margin-top: 20px; */
+}
+
+.sidebar {
+    width: 25%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.location, .email {
+  text-align: left ;
+    margin: 8px 0;
+}
+
+.stats{
+  text-align: left ;
+    margin: 8px 0;
+  font-size: 35px;
+}
+
+.icon-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligns everything to the left */
+}
+
+.icon-left i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+/*     height: 100vh; /* Full height to center vertically */ */
+}
+
+.circular-image {
+    width: 250px;          /* Width of the image */
+    height: 250px;         /* Height of the image */
+    border-radius: 50%;    /* Makes the image circular */
+    overflow: hidden;      /* Ensures the image stays within the circle */
+}
+
+.circular-image img {
+    width: 100%;           /* Image fits within the container */
+    height: 100%;          /* Image fits within the container */
+    object-fit: cover;     /* Scales the image to cover the container */
+}
