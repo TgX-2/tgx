@@ -64,27 +64,26 @@
     </div>
 
     <script>
-    function showPage(pageId) {
-  var pages = document.querySelectorAll('.page');
-  pages.forEach(function(page) {
-    page.classList.remove('active');
-  });
+      function showPage(pageId) {
+        var pages = document.querySelectorAll('.page');
+        
+        pages.forEach(function(page) {
+          if (page.classList.contains('active')) {
+            page.style.opacity = '0';
+            page.style.transform = 'translateX(-100%)';
+            setTimeout(() => {
+              page.classList.remove('active');
+            }, 500); // Time for the animation to complete
+          }
+        });
 
-  var buttons = document.querySelectorAll('.header-button button');
-  buttons.forEach(function(button) {
-    button.classList.remove('active-button');
-  });
-
-  var selectedPage = document.getElementById(pageId);
-  selectedPage.classList.add('active');
-
-  var selectedButton = Array.from(buttons).find(btn => btn.textContent === pageId.split('page')[1]);
-  if (selectedButton) {
-    selectedButton.classList.add('active-button');
-  }
-}
-
-
+        var selectedPage = document.getElementById(pageId);
+        setTimeout(() => {
+          selectedPage.classList.add('active');
+          selectedPage.style.opacity = '1';
+          selectedPage.style.transform = 'translateX(0)';
+        }, 500); // Delay the new page's appearance until the old one is hidden
+      }
     </script>
   </body>
 </html>
