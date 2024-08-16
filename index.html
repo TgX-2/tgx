@@ -3,57 +3,38 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- <link rel="icon" href="https://get.wallhere.com/photo/anime-BOCCHI-THE-ROCK-2208337.jpg" /> -->
     <title>TgX.2</title>
     <link rel="stylesheet" href="style.css">
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     
     <div class="header-button">
       <ul>
-        <li><button onclick="showPage('page1')">
-          Information
-        </button></li>
-        <li><button onclick="showPage('page2')">
-          Social Media
-        </button></li>
-        <li><button onclick="showPage('page3')">
-          Oline Judge
-        </button></li>
+        <li><button onclick="showPage('page1')">Information</button></li>
+        <li><button onclick="showPage('page2')">Social Media</button></li>
+        <li><button onclick="showPage('page3')">Online Judge</button></li>
       </ul>
-      
     </div>
     
     <div id="page1" class="page active">
       <div class="container">
         <div class="sidebar">
           <div class="image-container">
-          <div class="circular-image">
-            <img src="img/avt.png">
+            <div class="circular-image">
+              <img src="img/avt.png" alt="Avatar">
+            </div>
           </div>
-            
-          </div>
-          
           <h2 class="stats">Bui Dinh Loc</h2>
           <h3 class="stats-lower">TgX.2 · 11Ti · CHV</h3>
           <div class="icon-left">
-          <i class="fa-solid fa-star"></i>
-          <p class="location">VietNam</p>
+            <i class="fa-solid fa-star"></i>
+            <p class="location">VietNam</p>
           </div>
-          
-          
           <div class="icon-left">
             <i class="fa-regular fa-envelope"></i>
-            <p class="email">
-              buidinhloc231@gmail.com
-            </p>
+            <p class="email">buidinhloc231@gmail.com</p>
           </div>
-          
-          
-          
         </div>
         
         <div class="content">
@@ -63,41 +44,47 @@
             <p>Class: 11ti</p>
             <p>School: Hung Vuong High School for Gifted Student</p>
           </div>
-
           <div class="content-mid">
-            <p>Love: Manga, Alime, Competitive Programing</p>
+            <p>Love: Manga, Anime, Competitive Programming</p>
             <p>Hate: Competitive Programming</p>
             <p>Current waifu: 2B (NieR: Automata)</p>
             <p>Favorite song: <a class="favorite-song" href="https://www.youtube.com/watch?v=dnyLJorZ_as">Tinh ca Tay Bac</a></p>
             <p>Quotes: "Toi se lay con ngua de tro ve loi di xua"</p>
           </div>
         </div>
-
       </div>
     </div>
   
     <div id="page2" class="page">
-      <p>Deo co gi</p>
+      <p>Page 2 content goes here.</p>
     </div>
 
-      <script>
-  function showPage(pageId) {
-            var pages = document.querySelectorAll('.page');
-            pages.forEach(function(page) {
-                page.classList.remove('active');
-            });
+    <div id="page3" class="page">
+      <p>Page 3 content goes here.</p>
+    </div>
 
-            var selectedPage = document.getElementById(pageId);
-            selectedPage.classList.add('active');
-        }
+    <script>
+    function showPage(pageId) {
+  var pages = document.querySelectorAll('.page');
+  pages.forEach(function(page) {
+    page.classList.remove('active');
+  });
 
-        pages.forEach(function(page) {
-        page.classList.remove('active');
-        page.style.opacity = 0;
-        page.style.transform = 'translateX(100%)';
-    });
+  var buttons = document.querySelectorAll('.header-button button');
+  buttons.forEach(function(button) {
+    button.classList.remove('active-button');
+  });
+
+  var selectedPage = document.getElementById(pageId);
+  selectedPage.classList.add('active');
+
+  var selectedButton = Array.from(buttons).find(btn => btn.textContent === pageId.split('page')[1]);
+  if (selectedButton) {
+    selectedButton.classList.add('active-button');
+  }
+}
+
 
     </script>
-    
   </body>
 </html>
