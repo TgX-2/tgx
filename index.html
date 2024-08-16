@@ -28,9 +28,6 @@
     </div>
     
     <div id="page1" class="page active">
-      
-      
-      
       <div class="container">
         <div class="sidebar">
           <div class="image-container">
@@ -66,14 +63,25 @@
             <p>Class: 11ti</p>
             <p>School: Hung Vuong High School for Gifted Student</p>
           </div>
+
+          <div class="content-mid">
+            <p>Love: Manga, Alime, Competitive Programing</p>
+            <p>Hate: Competitive Programming</p>
+            <p>Current waifu: 2B (NieR: Automata)</p>
+            <p>Favorite song: <a class="favorite-song" href="https://www.youtube.com/watch?v=dnyLJorZ_as">Tinh ca Tay Bac</a></p>
+            <p>Quotes: "Toi se lay con ngua de tro ve loi di xua"</p>
+          </div>
         </div>
 
       </div>
-      
     </div>
   
-       <script>
-        function showPage(pageId) {
+    <div id="page2" class="page active">
+      <p>Deo co gi</p>
+    </div>
+
+      <script>
+  function showPage(pageId) {
             var pages = document.querySelectorAll('.page');
             pages.forEach(function(page) {
                 page.classList.remove('active');
@@ -82,6 +90,13 @@
             var selectedPage = document.getElementById(pageId);
             selectedPage.classList.add('active');
         }
+
+        pages.forEach(function(page) {
+        page.classList.remove('active');
+        page.style.opacity = 0;
+        page.style.transform = 'translateX(100%)';
+    });
+
     </script>
     
   </body>
