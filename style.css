@@ -5,7 +5,7 @@ body {
 ul {
     position: sticky;
     top: 0;
-    width: 100%;
+    /* width: 100%; */
     list-style-type: none;
     margin: 0;
     padding: 10px;
@@ -13,16 +13,16 @@ ul {
     background-color: #F6F8FA;
     border-radius: 15px;
 }
-
 li {
     float: left;
+    background-color: none;
     position: relative;
 }
 
-button {
+#page1 button {
     display: block;
     color: black;
-    background-color: #F6F8FA;
+    /* background-color: white; */
     text-align: left;
     padding: 14px 16px;
     border: none;
@@ -33,34 +33,13 @@ button {
     position: relative;
     outline: none;
 }
-
-button:hover,
+#page1 button:hover,
 .active-button {
     background-color: #EEF1F4;
     border-radius: 15px;
+    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); */
 }
 
-.active-button::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    background-color: #04AA6D;
-    bottom: -2px;
-    left: 0;
-    border-radius: 2px;
-}
-
-.active {
-    background-color: #04AA6D;
-}
-
-#rcorners {
-    background: #73AD21;
-    padding: 20px;
-    width: 200px;
-    height: 150px;
-}
 
 
 /* Navigation Bar */
@@ -72,17 +51,11 @@ button:hover,
 }
 
 .navbar-container {
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-}
-
-.logo {
-    font-size: 24px;
-    color: white;
-    text-decoration: none;
-    padding: 14px 0;
+    
 }
 
 .navbar-links {
@@ -107,9 +80,11 @@ button:hover,
 .navbar-links a:hover {
     background-color: #575757;
     border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+
 }
 
-button {
+.header-button button {
     display: block;
     color: black;
     background-color: #F6F8FA;
@@ -121,9 +96,22 @@ button {
     font-weight: bold;
 }
 
+.page6-container button {
+    display: block;
+    color: black;
+    background-color: white;
+    text-align: left;
+    padding: 14px 16px;
+    border: none;
+    text-decoration: none;
+    font-family: 'jetbrains mono';
+    font-weight: bold;
+}
+
 button:hover {
     background-color: #EEF1F4;
     border-radius: 15px;
+    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); */
 }
 
 .page {
@@ -132,6 +120,8 @@ button:hover {
     background-color: #EEF1F4;
     margin-top: 15px;
     border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+
 }
 
 .active {
@@ -145,6 +135,7 @@ button:hover {
     background-color: white;
     border-radius: 15px;
     /*     margin-top: 20px; */
+
 }
 
 .content {
@@ -161,6 +152,7 @@ button:hover {
     background-color: #f0f2f5;
     border-radius: 15px;
     opacity: 1;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar {
@@ -177,6 +169,7 @@ button:hover {
 .sidebar:hover {
     background-color: #f0f2f5;
     opacity: 1;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar:hover h3 {
@@ -232,8 +225,6 @@ button:hover {
     object-fit: cover;
     /* Scales the image to cover the container */
 }
-
-
 .header-button {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -243,6 +234,7 @@ button:hover {
     text-align: left;
     font-weight: 100;
     color: #DDDFE1;
+    transition: 1s;
     margin: -20px 5px 10px;
 }
 
@@ -263,6 +255,12 @@ button:hover {
 
 .content-container:hover {
     background-color: rgba(122, 144, 153, 0.753);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.content-container:hover .stats-lower {
+    transition: 1s;
+    background-color: #DDDFE1;
 }
 
 .content-container p {
@@ -289,6 +287,7 @@ button:hover {
 
 .content-mid:hover {
     background-color: rgba(122, 144, 153, 0.753);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .content-mid p {
@@ -319,27 +318,185 @@ button:hover {
     transform: translateX(0);
 }
 
-/* Reset the previous active styles */
-header-button ul li button.active-button {
-    background-color: #04AA6D;
-    color: white;
+.page-content {
+    display: none;
 }
 
-/* Create the active indicator */
-.header-button ul li button.active-button::after {
+.page-content.active {
+    display: block;
+}
+
+.SourceCode-Content {
+    /* display: flex; */
+    /* width: 100%; */
+    /* height: 100%; */
+    /* margin-right: 15px; */
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 15px;
+    padding: 15px;
+}
+
+.page6-container {
+    /* background-color: white; */
+    border-radius: 15px;
+    /* padding: 15px; */
+    /* margin-right: 20px; */
+}
+
+.SourceCode-Content .page6-content .page6-content-topic textarea {
+    height: 100%;
+    width: 100%;
+}
+
+.page6-container ul {
+    position: sticky;
+    top: 0;
+    /* width: 100%; */
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.page6-container li {
+    float: left;
+    position: relative;
+    background-color: none;
+}
+
+/* Basic styles for the timeline */
+.timeline-page2 {
+    position: relative;
+    max-width: 800px; /* Set a maximum width */
+    margin: 0 auto; /* Center the timeline */
+    padding-top: 40px;
+}
+
+.container-page2 {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 60%; 
+}
+
+.timeline-page2::after {
     content: '';
     position: absolute;
-    width: 100%;
-    height: 4px;
-    background-color: #04AA6D;
-    bottom: -2px;
-    left: 0;
-    border-radius: 2px;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
 }
 
-/* Style for active link in the navbar */
-.navbar-links a.active {
-    background-color: #04AA6D;
-    color: white;
-    border-radius: 5px;
+
+.container-page2.left {
+    left: -20%;
+}
+
+/* Style for right containers */
+.container-page2.right {
+    left: 50%;
+}
+
+.container-page2 .content-page2 {
+    padding: 15px 15px;
+    background-color: #ffffff;
+    position: relative;
+    border-radius: 8px;
+    transition: 0.5s;
+
+}
+
+.container-page2.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+.container-page2.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+.content-page2 img {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+.content-page2 p {
+    /* padding: 15px; */
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Hover effect for timeline containers */
+.container-page2.left:hover .content-page2,
+.container-page2.right:hover .content-page2 {
+    background-color: #f0f2f5; /* Change background color on hover */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Add shadow for a pop-out effect */
+}
+
+/* Optional: Change the arrow color on hover */
+.container-page2.left:hover::before {
+    border-color: transparent transparent transparent #f0f2f5;
+}
+
+.container-page2.right:hover::before {
+    border-color: transparent #f0f2f5 transparent transparent;
+}
+
+/* Optional: Add transition for a smoother hover effect */
+.container-page2 .content-page2 {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* Hover effect for page1 buttons */
+#page1 button:hover {
+    background-color: #D0D7DD; /* Lighten the background color on hover */
+    border-radius: 15px; /* Maintain rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for page1 container content */
+.page1-container:hover .content {
+    background-color: #f0f2f5; /* Change background color on hover */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Add shadow for emphasis */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Optional: Adjust the active button styling on hover */
+#page1 .active-button:hover {
+    background-color: #BCC8D4; /* Slightly different color to highlight the active button */
+}
+
+
+.gif-image {
+    opacity: 1; /* Initially hide the GIF */
+    z-index: 2; /* Ensure GIF is on top when visible */
+    border-radius: 15px;
+    width: 10%;
+    height: 10%;
 }
