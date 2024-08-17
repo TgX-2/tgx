@@ -1,177 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TgX.2</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </head>
-  <body>
-    
-    <div class="header-button">
-      <ul>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="header-button">
+    <ul>
         <li><button onclick="showPage('page1')">Information</button></li>
-        <li><button onclick="showPage('page2')">Social Media</button></li>
-        <li><button onclick="showPage('page3')">Online Judge</button></li>
-        <li style="float:right"><button onclick="showPage('page4')">Source Code</button></li>
-      </ul>
+        <li><button onclick="showPage('page2')">Hall of Fame</button></li>
+        <li><button onclick="showPage('page3')">Social Media</button></li>
+        <li><button onclick="showPage('page4')">Online Judge</button></li>
+        <li><button onclick="showPage('page5')">Special</button></li>
+        <li style="float:right"><button onclick="showPage('page6')">Source Code</button></li>
+    </ul>
+</div>
+
+<div id="page1" class="page active">
+    <div class="container">
+        <div class="sidebar">
+            <div class="image-container">
+                <div class="circular-image">
+                    <img src="img/avt.png" alt="Avatar">
+                </div>
+            </div>
+            <h2 class="stats">Bui Dinh Loc</h2>
+            <h3 class="stats-lower">TgX.2 · 11Ti · CHV</h3>
+            <div class="icon-left">
+                <i class="fa-solid fa-star"></i>
+                <p class="location">Vietnam</p>
+            </div>
+            <div class="icon-left">
+                <i class="fa-regular fa-envelope"></i>
+                <p class="email">buidinhloc231@gmail.com</p>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-head"><h1>HI 👋🏻</h1></div>
+            <div class="content-container">
+                <p>Full name: Bui Dinh Loc</p>
+                <p>Class: 11ti</p>
+                <p>School: Hung Vuong High School for Gifted Students</p>
+            </div>
+            <div class="content-mid">
+                <p>Love: Manga, Anime, Competitive Programming</p>
+                <p>Hate: Competitive Programming</p>
+                <p>Current Waifu: 2B (NieR: Automata)</p>
+                <p>Favorite song: <a class="favorite-song" href="https://www.youtube.com/watch?v=dnyLJorZ_as">Tinh ca Tay Bac</a></p>
+                <p>Quote: "Toi se lay con ngua de tro ve loi di xua"</p>
+            </div>
+        </div>
     </div>
+</div>
+
+<div id="page2" class="page">
+    <div class="timeline-page2">
+        <div class="container-page2 left"><div class="content-page2">
+            <h2>2019</h2>
+            <ul>
+                <li>Nhat Tin hoc tre Tinh Binh Duong</li>
+                <li>Khuyen khich Tin hoc tre cap Quoc Gia</li>
+            </ul>
+
+            <img src="img/tht1.jpg">
+        </div>
+        </div>
+
+        <div class="container-page2 right"><div class="content-page2">
+            <h2>2023</h2>
+
+            <ul><p>Ba HSG Tinh</p></ul>
+            <img src="img/hsg.jpg">
+
+            <ul><p>Nhi Tin hoc tre Tinh Binh Duong</p></ul>
+            <img src="img/tht2.jpg">
+
+            <ul><p>Ba Tin hoc tre Khu vuc Mien Nam</p></ul>
+            <img src="img/tht4.jpg">
+        </div>
+        </div>
+
+        <div class="container-page2 left"><div class="content-page2">
+            <h2>2024</h2>
+            <ul>
+                <li>Nhi Tin hoc tre Tinh Binh Duong</li>
+                <li>Ba Tin hoc tre Khu vuc Mien Nam</li>
+            </ul>
+            <img src="img/tht3.jpg">
+        </div>
+        </div>
+
+    </div>
+</div>
+
+<div id="page3" class="page">
+    <!-- Online Judge Page Content -->
+</div>
+
+<div id="page4" class="page">
+    <!-- Online Judge Page Content -->
+</div>
+
+<div id="page5" class="page">
+    <img src="img/seal.gif" alt="Loading GIF" class="gif-image" id="gif"> 
+</div>
+
+
+<div id="page6" class="page">
+    <div class="page6-container">
+        <ul>
+            <li><button onclick="changeSubPage('page1-content')">HTML</button></li>
+            <li><button onclick="changeSubPage('page2-content')">CSS</button></li>
+            <li><button onclick="changeSubPage('page3-content')">JavaScript</button></li>
+        </ul>
+      </div>
+
+        <div class="SourceCode-Content">
+            <div id="page1-content" class="page-content active">
+                <div class="page6-content-topic">
+                  <textarea>
+                    cadaeacsdfasdfasdf
+                  </textarea>
+                </div>
+            </div>
+            <div id="page2-content" class="page-content">
+                <!-- CSS content -->
+                <p>asdfasdm;kflaecv</p>
+            </div>
     
-    <div id="page1" class="page active">
-      <div class="container">
-        <div class="sidebar">
-          <div class="image-container">
-            <div class="circular-image">
-              <img src="img/avt.png" alt="Avatar">
-            </div>
-          </div>
-          <h2 class="stats">Bui Dinh Loc</h2>
-          <h3 class="stats-lower">TgX.2 · 11Ti · CHV</h3>
-          <div class="icon-left">
-            <i class="fa-solid fa-star"></i>
-            <p class="location">VietNam</p>
-          </div>
-          <div class="icon-left">
-            <i class="fa-regular fa-envelope"></i>
-            <p class="email">buidinhloc231@gmail.com</p>
+            <div id="page3-content" class="page-content">
+              <!-- CSS content -->
+              <p>asdfasdm;kflaecaszdfv</p>
           </div>
         </div>
-        
-        <div class="content">
-          <div class="content-head"><h1>HI 👋🏻</h1></div>
-          <div class="content-container">
-            <p>Full name: Bui Dinh Loc</p>
-            <p>Class: 11ti</p>
-            <p>School: Hung Vuong High School for Gifted Student</p>
-          </div>
-          <div class="content-mid">
-            <p>Love: Manga, Anime, Competitive Programming</p>
-            <p>Hate: Competitive Programming</p>
-            <p>Current waifu: 2B (NieR: Automata)</p>
-            <p>Favorite song: <a class="favorite-song" href="https://www.youtube.com/watch?v=dnyLJorZ_as">Tinh ca Tay Bac</a></p>
-            <p>Quotes: "Toi se lay con ngua de tro ve loi di xua"</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    <div id="page2" class="page">
-<div class="container">
-        <div class="sidebar">
-          <div class="image-container">
-            <div class="circular-image">
-              <img src="img/avt.png" alt="Avatar">
-            </div>
-          </div>
-          <h2 class="stats">Bui Dinh Loc</h2>
-          <h3 class="stats-lower">TgX.2 · 11Ti · CHV</h3>
-          <div class="icon-left">
-            <i class="fa-solid fa-star"></i>
-            <p class="location">VietNam</p>
-          </div>
-          <div class="icon-left">
-            <i class="fa-regular fa-envelope"></i>
-            <p class="email">buidinhloc231@gmail.com</p>
-          </div>
-        </div>
-        
-        <div class="content">
-          <div class="content-head"><h1>HI 👋🏻</h1></div>
-          <div class="content-container">
-            <p>Full name: Bui Dinh Loc</p>
-            <p>Class: 11ti</p>
-            <p>School: Hung Vuong High School for Gifted Student</p>
-          </div>
-          <div class="content-mid">
-            <p>Love: Manga, Anime, Competitive Programming</p>
-            <p>Hate: Competitive Programming</p>
-            <p>Current waifu: 2B (NieR: Automata)</p>
-            <p>Favorite song: <a class="favorite-song" href="https://www.youtube.com/watch?v=dnyLJorZ_as">Tinh ca Tay Bac</a></p>
-            <p>Quotes: "Toi se lay con ngua de tro ve loi di xua"</p>
-          </div>
-        </div>
-      </div>
-    </div>
+</div>
 
-    <div id="page3" class="page">
-      <p>Page 3 content goes here.</p>
-    </div>
-
-    <div id="page4" class="page">
-      <div>
-        <div>
-          <ul>
-            <li><button onclick="changeSubPage('page4-content')">HTML</button></li>
-            <li><button onclick="changeSubPage('page5-content')">CSS</button></li>
-          </ul>
-        </div>
-
-        <div id="page4-content" class="page active">
-          <p>ahdhfafd</p>
-        </div>
-
-        <div id="page5-content" class="page">
-          <p>asdkfl;asdnmv;aksjlnve</p>
-        </div>
-      </div>
-    </div>
-
-    <script>
-function changeSubPage(subPageId) {
-    var subPages = document.querySelectorAll('.page-content');
-    var currentSubPage = document.querySelector('.page-content.active');
-    var selectedSubPage = document.getElementById(subPageId);
-
-    if (currentSubPage === selectedSubPage) return;
-
-    currentSubPage.classList.remove('active');
-    selectedSubPage.classList.add('active');
-}
-
-function showPage(pageId) {
-  var pages = document.querySelectorAll('.page');
-  var currentPage = document.querySelector('.page.active');
-  var selectedPage = document.getElementById(pageId);
-
-  if (currentPage === selectedPage) return;
-
-  var currentPageIndex = Array.from(pages).indexOf(currentPage);
-  var selectedPageIndex = Array.from(pages).indexOf(selectedPage);
-
-  var direction = selectedPageIndex > currentPageIndex ? 'left' : 'right';
-
-  // Move the current page out first
-  if (direction === 'left') {
-    currentPage.style.transform = 'translateX(-10%)';
-  } else {
-    currentPage.style.transform = 'translateX(10%)';
-  }
-  currentPage.style.opacity = '0';
-
-  // Wait for the current page to finish its transition
-  setTimeout(() => {
-    currentPage.classList.remove('active');
-
-    // Prepare the selected page to slide in and fade in
-    if (direction === 'left') {
-      selectedPage.style.transform = 'translateX(10%)';
-    } else {
-      selectedPage.style.transform = 'translateX(-10%)';
-    }
-    selectedPage.classList.add('active');
-    selectedPage.style.opacity = '0'; // Start with 0 opacity
-
-    // Trigger the opacity and transform transition
-    setTimeout(() => {
-      selectedPage.style.transform = 'translateX(0)';
-      selectedPage.style.opacity = '1'; // Gradually increase opacity
-    }, 50); // Small delay to trigger the animation
-
-  }, 500); // Delay matches the slide-out time of the current page
-}
-
-
-    </script>
-  </body>
+<script src="script.js"></script>
+</body>
 </html>
