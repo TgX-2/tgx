@@ -14,6 +14,7 @@
         <li><button onclick="showPage('page1')">Information</button></li>
         <li><button onclick="showPage('page2')">Social Media</button></li>
         <li><button onclick="showPage('page3')">Online Judge</button></li>
+        <li style="float:right"><button onclick="showPage('page4')">Source Code</button></li>
       </ul>
     </div>
     
@@ -56,34 +57,121 @@
     </div>
   
     <div id="page2" class="page">
-      <p>Page 2 content goes here.</p>
+<div class="container">
+        <div class="sidebar">
+          <div class="image-container">
+            <div class="circular-image">
+              <img src="img/avt.png" alt="Avatar">
+            </div>
+          </div>
+          <h2 class="stats">Bui Dinh Loc</h2>
+          <h3 class="stats-lower">TgX.2 · 11Ti · CHV</h3>
+          <div class="icon-left">
+            <i class="fa-solid fa-star"></i>
+            <p class="location">VietNam</p>
+          </div>
+          <div class="icon-left">
+            <i class="fa-regular fa-envelope"></i>
+            <p class="email">buidinhloc231@gmail.com</p>
+          </div>
+        </div>
+        
+        <div class="content">
+          <div class="content-head"><h1>HI 👋🏻</h1></div>
+          <div class="content-container">
+            <p>Full name: Bui Dinh Loc</p>
+            <p>Class: 11ti</p>
+            <p>School: Hung Vuong High School for Gifted Student</p>
+          </div>
+          <div class="content-mid">
+            <p>Love: Manga, Anime, Competitive Programming</p>
+            <p>Hate: Competitive Programming</p>
+            <p>Current waifu: 2B (NieR: Automata)</p>
+            <p>Favorite song: <a class="favorite-song" href="https://www.youtube.com/watch?v=dnyLJorZ_as">Tinh ca Tay Bac</a></p>
+            <p>Quotes: "Toi se lay con ngua de tro ve loi di xua"</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div id="page3" class="page">
       <p>Page 3 content goes here.</p>
     </div>
 
-    <script>
-      function showPage(pageId) {
-        var pages = document.querySelectorAll('.page');
-        
-        pages.forEach(function(page) {
-          if (page.classList.contains('active')) {
-            page.style.opacity = '0';
-            page.style.transform = 'translateX(-100%)';
-            setTimeout(() => {
-              page.classList.remove('active');
-            }, 500); // Time for the animation to complete
-          }
-        });
+    <div id="page4" class="page">
+      <div>
+        <div>
+          <ul>
+            <li><button onclick="changeSubPage('page4-content')">HTML</button></li>
+            <li><button onclick="changeSubPage('page5-content')">CSS</button></li>
+          </ul>
+        </div>
 
-        var selectedPage = document.getElementById(pageId);
-        setTimeout(() => {
-          selectedPage.classList.add('active');
-          selectedPage.style.opacity = '1';
-          selectedPage.style.transform = 'translateX(0)';
-        }, 500); // Delay the new page's appearance until the old one is hidden
-      }
+        <div id="page4-content" class="page active">
+          <p>ahdhfafd</p>
+        </div>
+
+        <div id="page5-content" class="page">
+          <p>asdkfl;asdnmv;aksjlnve</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+function changeSubPage(subPageId) {
+    var subPages = document.querySelectorAll('.page-content');
+    var currentSubPage = document.querySelector('.page-content.active');
+    var selectedSubPage = document.getElementById(subPageId);
+
+    if (currentSubPage === selectedSubPage) return;
+
+    currentSubPage.classList.remove('active');
+    selectedSubPage.classList.add('active');
+}
+
+function showPage(pageId) {
+  var pages = document.querySelectorAll('.page');
+  var currentPage = document.querySelector('.page.active');
+  var selectedPage = document.getElementById(pageId);
+
+  if (currentPage === selectedPage) return;
+
+  var currentPageIndex = Array.from(pages).indexOf(currentPage);
+  var selectedPageIndex = Array.from(pages).indexOf(selectedPage);
+
+  var direction = selectedPageIndex > currentPageIndex ? 'left' : 'right';
+
+  // Move the current page out first
+  if (direction === 'left') {
+    currentPage.style.transform = 'translateX(-10%)';
+  } else {
+    currentPage.style.transform = 'translateX(10%)';
+  }
+  currentPage.style.opacity = '0';
+
+  // Wait for the current page to finish its transition
+  setTimeout(() => {
+    currentPage.classList.remove('active');
+
+    // Prepare the selected page to slide in and fade in
+    if (direction === 'left') {
+      selectedPage.style.transform = 'translateX(10%)';
+    } else {
+      selectedPage.style.transform = 'translateX(-10%)';
+    }
+    selectedPage.classList.add('active');
+    selectedPage.style.opacity = '0'; // Start with 0 opacity
+
+    // Trigger the opacity and transform transition
+    setTimeout(() => {
+      selectedPage.style.transform = 'translateX(0)';
+      selectedPage.style.opacity = '1'; // Gradually increase opacity
+    }, 50); // Small delay to trigger the animation
+
+  }, 500); // Delay matches the slide-out time of the current page
+}
+
+
     </script>
   </body>
 </html>
